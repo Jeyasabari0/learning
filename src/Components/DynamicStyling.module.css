@@ -1,0 +1,10 @@
+body{
+    background-color: black;
+}
+button{
+    margin: 200px;
+    color: rgb(251, 251, 251);
+    font-size: large;
+    width: 100px;
+    height:90px
+}
