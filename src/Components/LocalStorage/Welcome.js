@@ -2,6 +2,7 @@ import { Button } from '@mui/material'
 import React, { useState } from 'react'
 import Register from './Register'
 import Login from './Login'
+import './Style.module.css'
 
 function Welcome() {
 
@@ -20,7 +21,7 @@ function Welcome() {
 
   return (
     <div>
-      <Button onClick={regist}>REGISTER</Button><Button onClick={log}>LOGIN</Button>
+      <Button variant='contained' onClick={regist}>REGISTER</Button><Button variant='contained' onClick={log}>LOGIN</Button>
     {register?<Register/>:''}
     {login?<Login/>:''}
     </div>

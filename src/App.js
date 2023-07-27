@@ -1,15 +1,25 @@
 import './App.css';
-import TwowayParent from './Components/Twoway-Binding/TwowayParent';
-// import Welcome from './Components/LocalStorage/Welcome';
-// import DynamicStyling from './Components/DynamicStyling';
+// import ContextFunction from './Components/UseContext/ContextFunction';
+import ReducerCounter from './Components/UseReducer/ReducerCounter';
+// import DataFetching from './Components/UseEffect/DataFetching';
+// import Display from './Components/UseEffect/Display';
+// import IntervalClass from './Components/UseEffect/IntervalClass';
+// import IntervalFunction from './Components/UseEffect/IntervalFunction';
+// import UseEffectClass from './Components/UseEffect/UseEffectClass';
+// import UseEffectFunction from './Components/UseEffect/UseEffectFunction';
 
 function App() {
- 
+
   return (
     <div className="App">
-      {/* <DynamicStyling/> */}
-   {/* <Welcome/> */}
-   <TwowayParent/>
+      {/* <UseEffectClass />
+      <UseEffectFunction />
+      <Display />
+      <IntervalClass />
+      <IntervalFunction /> */}
+      {/* <DataFetching/> */}
+      {/* <ContextFunction /> */}
+      <ReducerCounter/>
     </div>
   );
 }

@@ -1,15 +1,15 @@
-import React,{useState} from 'react'
+import { TextField,Button} from '@mui/material';
+import React, { useState } from 'react'
 
 
 const Register = () => {
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [cpassword, setCpassword] = useState('');
   const [registrationError, setRegistrationError] = useState('');
-  
-  
-  const handleReg = () => {
+
+
+  const submit = () => {
     const storedUserData = localStorage.getItem('userData');
     const existingUserData = storedUserData ? JSON.parse(storedUserData) : [];
 
@@ -26,11 +26,6 @@ const Register = () => {
       return;
     }
 
-    if (password !== cpassword) {
-      setRegistrationError('Password and confirm password do not match.');
-      return;
-    }
-
     const newUserData = {
       username,
       email,
@@ -43,69 +38,22 @@ const Register = () => {
     setUsername('');
     setEmail('');
     setPassword('');
-    setCpassword('');
     setRegistrationError('');
   };
 
   return (
     <div className='all'>
-    <div className="container">
-      <form action="" id="form">
-        <h2>REGISTER</h2>
+      <div className="container">
+        <form action="" id="form">
+          <h2>REGISTER</h2>
+          <div><TextField variant='outlined' type="text" label='Username' value={username} onChange={(e) => setUsername(e.target.value)}/></div>
+            <div><TextField variant='outlined' type="text" label='email' value={email} onChange={(e) => setEmail(e.target.value)}/></div>
+            <div><TextField variant='outlined' type="password" label='password' value={password} onChange={(e) => setPassword(e.target.value)}/></div>
+              {registrationError && <div className="error">{registrationError}</div>}
+            <Button variant='contained'type="button" onClick={submit}>Submit</Button>
 
-        <div className="input-grp">
-          <label htmlFor="username">Username</label>
-          <input
-            type="text"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-            name="username"
-            id="username"
-          />
-          <div className="error"></div>
-        </div>
-        <div className="input-grp">
-          <label htmlFor="email">Email</label>
-          <input
-            type="text"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            name="email"
-            id="email"
-          />
-          <div className="error"></div>
-        </div>
-        <div className="input-grp">
-          <label htmlFor="password">Password</label>
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            name="password"
-            id="password"
-          />
-          <div className="error"></div>
-        </div>
-        <div className="input-grp">
-          <label htmlFor="cpassword">Confirm password</label>
-          <input
-            type="password"
-            value={cpassword}
-            onChange={(e) => setCpassword(e.target.value)}
-            name="confirm password"
-            id="cpassword"
-          />
-          <div className="error">
-            {registrationError && <div className="error">{registrationError}</div>}
-          </div>
-        </div>
-        <div className='btn'>
-          <button type="button" onClick={handleReg}>
-            Submit
-          </button>
-        </div>
-      </form>
-    </div>
+        </form>
+      </div>
     </div>
   );
 };

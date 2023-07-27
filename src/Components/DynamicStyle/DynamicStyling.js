@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import styles from './DynamicStyling.module.css'
+
 function DynamicStyling() {
 
 const [color,setColor]=useState(false)
