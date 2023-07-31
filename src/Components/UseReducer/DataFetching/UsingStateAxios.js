@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 
-function UsingState() {
+function UsingAxios() {
 
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState('')
@@ -31,4 +31,4 @@ function UsingState() {
     )
 }
 
-export default UsingState
+export default UsingAxios

@@ -1,6 +1,10 @@
-import './App.css';
-import UsingFetching from './Components/UseReducer/DataFetching/UsingAxios';
-// import UsingState from './Components/UseReducer/DataFetching/UsingState';
+import { Route, Routes } from 'react-router-dom';
+import Home from './Components/Routers/Home';
+import About from './Components/Routers/About';
+import Navigate from './Components/Routers/Navigate';
+import Order from './Components/Routers/Order';
+// import UsingAsync from './Components/UseReducer/DataFetching/UsingAsync';
+// import UsingReducerAxios from './Components/UseReducer/DataFetching/UsingReducerAxios';
 // import MultipleReducer from './Components/UseReducer/MultipleReducer';
 // import ReducerAndContext from './Components/UseReducer/Reducer-with-Context/ReducerAndContext';
 // import ReducerObjCounter from './Components/UseReducer/ReducerObjCounter';
@@ -27,9 +31,16 @@ function App() {
       <ReducerCounter/>
       <ReducerObjCounter/>
       <MultipleReducer/> 
-      <ReducerAndContext/>*/}
-      {/* <UsingState/> */}
-      <UsingFetching />
+      <ReducerAndContext/>
+      <UsingReducerAxios />
+      <UsingAsync /> */}
+
+      <Navigate />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='about' element={<About />} />
+        <Route path='order' element={<Order />} />
+      </Routes>
     </div>
   );
 }
