@@ -1,8 +1,5 @@
-import { Route, Routes } from 'react-router-dom';
-import Home from './Components/Routers/Home';
-import About from './Components/Routers/About';
-import Navigate from './Components/Routers/Navigate';
-import Order from './Components/Routers/Order';
+import Welcome from './Components/LocalStorage/Welcome';
+// import Router from './Components/Routers/Router';
 // import UsingAsync from './Components/UseReducer/DataFetching/UsingAsync';
 // import UsingReducerAxios from './Components/UseReducer/DataFetching/UsingReducerAxios';
 // import MultipleReducer from './Components/UseReducer/MultipleReducer';
@@ -34,13 +31,9 @@ function App() {
       <ReducerAndContext/>
       <UsingReducerAxios />
       <UsingAsync /> */}
+      {/* <Router /> */}
+      <Welcome/>
 
-      <Navigate />
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='about' element={<About />} />
-        <Route path='order' element={<Order />} />
-      </Routes>
     </div>
   );
 }

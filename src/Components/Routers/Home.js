@@ -5,11 +5,11 @@ import { useNavigate } from 'react-router-dom'
 
 
 const Home = () => {
-    const navigate=useNavigate()
+  const navigate = useNavigate()
   return (
     <div className='routers'>
       <h1>HOME</h1>
-      <Button variant='contained' onClick={()=>navigate('order')}>Order</Button>
+      <Button variant='contained' onClick={() => navigate('order', { replace: true })}>Order</Button>
     </div>
   )
 }

@@ -49,8 +49,8 @@ const Register = () => {
           <div><TextField variant='outlined' type="text" label='Username' value={username} onChange={(e) => setUsername(e.target.value)}/></div>
             <div><TextField variant='outlined' type="text" label='email' value={email} onChange={(e) => setEmail(e.target.value)}/></div>
             <div><TextField variant='outlined' type="password" label='password' value={password} onChange={(e) => setPassword(e.target.value)}/></div>
-              {registrationError && <div className="error">{registrationError}</div>}
             <Button variant='contained'type="button" onClick={submit}>Submit</Button>
+            {registrationError && <div className="error">{registrationError}</div>}
 
         </form>
       </div>

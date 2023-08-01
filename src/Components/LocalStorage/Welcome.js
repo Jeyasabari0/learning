@@ -6,24 +6,25 @@ import './Style.module.css'
 
 function Welcome() {
 
-  const[login,setLogin]=useState(false)
-  const[register,setRegister]=useState(false)
+  const [login, setLogin] = useState(false)
+  const [register, setRegister] = useState(false)
 
-  const regist=()=>{
-    setRegister(value=>!value)
+  const regist = () => {
+    setRegister(true)
     setLogin(false)
   }
 
-  const log=()=>{
-    setLogin(value=>!value)
+  const log = () => {
+    setLogin(true)
     setRegister(false)
   }
 
   return (
     <div>
-      <Button variant='contained' onClick={regist}>REGISTER</Button><Button variant='contained' onClick={log}>LOGIN</Button>
-    {register?<Register/>:''}
-    {login?<Login/>:''}
+      <Button variant='contained' onClick={regist}>REGISTER</Button>      
+      <Button variant='contained' onClick={log}>LOGIN</Button>
+      {register ? <Register /> : ''}
+      {login ? <Login /> : ''}
     </div>
   )
 }
