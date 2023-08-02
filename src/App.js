@@ -1,5 +1,5 @@
-import Welcome from './Components/LocalStorage/Welcome';
-// import Router from './Components/Routers/Router';
+
+// import Welcome from './Components/LocalStorage/Welcome';
 // import UsingAsync from './Components/UseReducer/DataFetching/UsingAsync';
 // import UsingReducerAxios from './Components/UseReducer/DataFetching/UsingReducerAxios';
 // import MultipleReducer from './Components/UseReducer/MultipleReducer';
@@ -14,11 +14,17 @@ import Welcome from './Components/LocalStorage/Welcome';
 // import UseEffectClass from './Components/UseEffect/UseEffectClass';
 // import UseEffectFunction from './Components/UseEffect/UseEffectFunction';
 
+import Click from "./Components/HigherOrderComponent/Click";
+import Hover from "./Components/HigherOrderComponent/Hover";
+import Router from "./Components/Routers/Router";
+
 function App() {
 
   return (
     <div className="App">
-      {/* <UseEffectClass />
+
+      {/* <Welcome /> 
+      <UseEffectClass />
       <UseEffectFunction />
       <Display />
       <IntervalClass />
@@ -30,9 +36,11 @@ function App() {
       <MultipleReducer/> 
       <ReducerAndContext/>
       <UsingReducerAxios />
-      <UsingAsync /> */}
-      {/* <Router /> */}
-      <Welcome/>
+      <UsingAsync />  
+      <Router /> 
+      <Click name='sabari' />
+      <Hover name='sabari' /> */}
+
 
     </div>
   );

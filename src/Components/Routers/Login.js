@@ -1,8 +1,8 @@
 import { Button, TextField } from '@mui/material'
 import React, { useState } from 'react'
-import { useAuth } from './Auth'
-import { useNavigate } from 'react-router-dom'
 
+import { useNavigate } from 'react-router-dom'
+import { useAuth } from './auth'
 
 const Login = () => {
 
@@ -18,7 +18,7 @@ const Login = () => {
 
     return (
         <div>
-            <TextField variant='contained' label='user' value={''} onChange={e => setUser(e.target.value)} />
+            <TextField variant='standard' label='user' onChange={(e) => setUser(e.target.value)} />
             <Button variant='contained' onClick={handleLogin}>LOGIN</Button>
         </div>
     )

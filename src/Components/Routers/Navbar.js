@@ -2,9 +2,10 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import './Nav.module.css'
 import { Button } from '@mui/material'
-import { useAuth } from './Auth'
+// import { useAuth } from './auth'
 
-const Navigate = () => {
+
+const Navbar = () => {
 
     const navs = ({ isActive }) => {
         return {
@@ -13,7 +14,7 @@ const Navigate = () => {
         }
     }
 
-    const auth = useAuth()
+    // const auth=useAuth()
 
     return (
         <div className='routers'>
@@ -21,9 +22,10 @@ const Navigate = () => {
             <Button variant='contained'><NavLink style={navs} to={'/about'}>About</NavLink></Button>
             <Button variant='contained'><NavLink style={navs} to={'/products'}>Products</NavLink></Button>
             <Button variant='contained'><NavLink style={navs} to={'/profile'}>Profile</NavLink></Button>
-            {!auth.user && (<Button variant='contained'><NavLink style={navs} to={'/login'}>Login</NavLink></Button>)}
+            {/* {!auth.user && (<Button variant='contained'><NavLink style={navs} to={'/login'}>Login</NavLink></Button>)} */}
+
         </div>
     )
 }
 
-export default Navigate
+export default Navbar

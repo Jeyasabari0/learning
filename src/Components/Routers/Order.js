@@ -11,7 +11,7 @@ const Order = () => {
   return (
     <div>
       <h2> order confirm!</h2>
-      <Button variant='contained' onClick={() => navigate(-1)}>Back</Button>
+      <Button variant='contained' onClick={() => navigate('/')}>Back</Button>
     </div>
   )
 }
