@@ -12,17 +12,14 @@ const withCounter = WrappedCounter => {
         }
 
         incrementCount = () => {
-
             this.setState(prevState => {
-
                 return { count: prevState.count + 1 }
-
             })
         }
 
         render() {
             return (
-                <WrappedCounter count={this.state.count} incrementCount={this.incrementCount} {...this.props}/>
+                <WrappedCounter count={this.state.count} incrementCount={this.incrementCount} {...this.props} />
             )
         }
     }

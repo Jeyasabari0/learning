@@ -13,10 +13,11 @@
 // import IntervalFunction from './Components/UseEffect/IntervalFunction';
 // import UseEffectClass from './Components/UseEffect/UseEffectClass';
 // import UseEffectFunction from './Components/UseEffect/UseEffectFunction';
+// import Click from "./Components/HigherOrderComponent/Click";
+// import Hover from "./Components/HigherOrderComponent/Hover";
+// import Router from "./Components/Routers/Router";
 
-import Click from "./Components/HigherOrderComponent/Click";
-import Hover from "./Components/HigherOrderComponent/Hover";
-import Router from "./Components/Routers/Router";
+import LazyLoad from "./Components/Lazy/LazyLoad";
 
 function App() {
 
@@ -37,10 +38,10 @@ function App() {
       <ReducerAndContext/>
       <UsingReducerAxios />
       <UsingAsync />  
-      <Router /> 
       <Click name='sabari' />
-      <Hover name='sabari' /> */}
-
+      <Hover name='sabari' /> 
+      <Router /> */}
+      <LazyLoad />
 
     </div>
   );
